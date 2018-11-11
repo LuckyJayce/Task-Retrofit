@@ -1,4 +1,5 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release'
 
 android {
     compileSdkVersion 28
@@ -31,4 +32,15 @@ dependencies {
     compileOnly 'com.shizhefei:task-tasks:1.0.0'
     compileOnly 'com.squareup.retrofit2:retrofit:2.4.0'
     compileOnly 'com.squareup.retrofit2:converter-gson:2.4.0'
+}
+
+//添加
+publish {
+    repoName = 'maven'
+    userOrg = 'luckyjayce'//bintray.com用户名
+    groupId = 'com.shizhefei'//jcenter上的路径
+    artifactId = 'task-retrofit-adapter'//项目名称
+    publishVersion = rootProject.ext.VERSION_NAME//版本号
+    desc = 'Task-Retrofit-Adapter'//描述
+    website = 'https://github.com/LuckyJayce/Task-Retrofit-Adapter'//网站
 }
