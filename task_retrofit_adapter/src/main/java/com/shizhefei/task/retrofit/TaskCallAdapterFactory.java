@@ -15,8 +15,6 @@
  */
 package com.shizhefei.task.retrofit;
 
-import android.support.annotation.Nullable;
-
 import com.shizhefei.task.IAsyncTask;
 import com.shizhefei.task.tasks.LinkTask;
 
@@ -32,7 +30,7 @@ import retrofit2.Retrofit;
 public final class TaskCallAdapterFactory extends CallAdapter.Factory {
 
     @Override
-    public @Nullable CallAdapter<?, ?> get(Type returnType, Annotation[] annotations, Retrofit retrofit) {
+    public CallAdapter<?, ?> get(Type returnType, Annotation[] annotations, Retrofit retrofit) {
         Class<?> rawType = getRawType(returnType);
 
         boolean isIAsyncTask = rawType == IAsyncTask.class;
