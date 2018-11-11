@@ -1,4 +1,6 @@
-# task_retrofit
+# 说明
+
+该类库用于适配retrofit生成对应的Task
 
 ## Gradle导入：
 
@@ -15,10 +17,7 @@ compile 'com.squareup.retrofit2:converter-gson:2.0.2'
 ```
 interface MyService {
     @GET("user/login" )
-    IAsyncTask<UserInfo> login(
-            @Query("username") String username,
-            @Query("password") String password
-    );
+    IAsyncTask<UserInfo> login(@Query("username") String username, @Query("password") String password);
 }
 ```
 
